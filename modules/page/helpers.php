@@ -7,7 +7,10 @@
  */
 function page_view(array $data)
 {
+    // extract the array keys into variables
+    // example: $data['title'] becomes $title
     extract($data);
 
+    // include the view
     include __DIR__ . "/../../app/views/page.phtml";
 }
