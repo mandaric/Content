@@ -1,16 +1,6 @@
 <?php
 
 /**
- * Main
- */
-
-// Load generic helper functions
-require __DIR__ . "/helpers.php";
-
-// Load routes and execute router
-require __DIR__ . "/routes.php";
-
-/**
  * Modules
  */
 
@@ -25,3 +15,14 @@ require __DIR__ . '/../modules/page/bootstrap.php';
 
 // User Module
 //require __DIR__ . '/../modules/user/bootstrap.php';
+
+/**
+ * Main
+ */
+
+// Load generic helper functions
+require __DIR__ . "/helpers.php";
+
+// Load routes and execute router
+require __DIR__ . "/routes.php";
+
