@@ -13,6 +13,9 @@ $routes = [
 
 $segments = explode("/", $_SERVER["REQUEST_URI"]);
 
+// array_filter removes empty value which appeared after explode function
+// array_values is used to reset the array key
+
 $segments = array_values(array_filter($segments));
 
 foreach ($routes as $routeKey => $routeData)
