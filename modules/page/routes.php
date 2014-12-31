@@ -5,7 +5,10 @@
  */
 route("GET", "/", function()
 {
-    echo 'index page';
+    page_view([
+        'title' => 'Index Page',
+        'content' => 'Welcome to my site'
+    ]);
 });
 
 /**
@@ -13,5 +16,8 @@ route("GET", "/", function()
  */
 route("GET", "home", function()
 {
-    echo 'homepage';
+    page_view([
+        'title' => 'Home Page',
+        'content' => 'Hello Homepage'
+    ]);
 });

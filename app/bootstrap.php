@@ -4,6 +4,9 @@
  * Main
  */
 
+// Load Config
+require __DIR__ . '/config.php';
+
 // Load generic helper functions
 require __DIR__ . "/helpers.php";
 
@@ -26,22 +29,4 @@ require __DIR__ . '/../modules/page/bootstrap.php';
 // User Module
 //require __DIR__ . '/../modules/user/bootstrap.php';
 
-$segments = explode("/", $_SERVER["REQUEST_URI"]);
-
-// array_filter removes empty value which appeared after explode function
-// array_values is used to reset the array key
-$segments = array_values(array_filter($segments));
-
-if (empty($segments))
-{
-    $route = '/';
-}
-else
-{
-    $route = $segments[0];
-}
-
-call_user_func($routes["GET"][$route]);
-
-//
-//debug($routes["GET"][$route]);
+start();
