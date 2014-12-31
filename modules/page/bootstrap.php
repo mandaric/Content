@@ -9,3 +9,6 @@
 
 // Helper file
 require __DIR__ . '/helpers.php';
+
+// Routes file
+require __DIR__ . '/routes.php';
