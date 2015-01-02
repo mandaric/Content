@@ -14,3 +14,8 @@ function page_view(array $data)
     // include the view
     include __DIR__ . "/../../app/views/page.phtml";
 }
+
+function form_view($action)
+{
+    include __DIR__ . "/../../app/views/form.phtml";
+}

@@ -13,6 +13,9 @@ require __DIR__ . "/helpers.php";
 // Load routes and execute router
 require __DIR__ . "/router.php";
 
+// Load database
+require __DIR__ . "/database.php";
+
 /**
  * Modules
  */
