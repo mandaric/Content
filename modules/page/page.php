@@ -16,7 +16,7 @@ function page_view(array $data)
     extract($data);
 
     // include the view
-    include __DIR__ . "/../../app/views/page.phtml";
+    include __DIR__ . "/../../app/views/page/page.phtml";
 
     // Get the content of the output buffer
     $output = ob_get_contents();
@@ -39,7 +39,7 @@ function page_form_view($action)
     // Start a new output buffer
     ob_start();
 
-    include __DIR__ . "/../../app/views/form.phtml";
+    include __DIR__ . "/../../app/views/page/form.phtml";
 
     // Get the content of the output buffer
     $output = ob_get_contents();
@@ -54,17 +54,20 @@ function page_form_view($action)
 /**
  * Create a new Page
  *
- * @param array $postData
+ * @param array $pageData
  * @return bool
  */
-function page_create(array $postData)
+function page_create(array $pageData)
 {
     // setup the page data
-    $pageData = [
-        "title" => $postData["title"],
-        "slug" => slugify($postData["title"]),
-        "content" => $postData["content"]
-    ];
+    $pageData["slug"] = slugify($pageData["title"]);
+
+    if (!isset($pageData["id"]))
+    {
+        $pageData["created_at"] = date("Y-m-d H:i:s");
+    }
+
+    $pageData["updated_at"] = date("Y-m-d H:i:s");
 
     return db_create("pages", $pageData);
 }

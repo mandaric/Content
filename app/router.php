@@ -37,7 +37,7 @@ function start()
     if (is_callable($route))
     {
         // execute $callback
-        call_user_func($route);
+        echo call_user_func($route);
     }
     else
     {

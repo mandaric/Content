@@ -22,14 +22,25 @@ route("GET", "/home", function()
     ]);
 });
 
-route("GET", "/cms/page/create", function()
+/**
+ * Page new
+ */
+route("GET", "/cms/page/new", function()
 {
     return page_form_view("/cms/page");
 });
 
+/**
+ * Page create
+ */
 route("POST", "/cms/page", function()
 {
-    if (page_create($_POST))
+    $pageData = [
+        "title" => $_POST["title"],
+        "content" => $_POST["content"]
+    ];
+
+    if (page_create($pageData))
     {
         return "page saved";
     }
