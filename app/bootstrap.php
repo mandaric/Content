@@ -5,7 +5,7 @@
  */
 
 // Load Config
-require __DIR__ . '/config.php';
+require __DIR__ . "/config.php";
 
 // Load generic helper functions
 require __DIR__ . "/helpers.php";
@@ -21,15 +21,15 @@ require __DIR__ . "/database.php";
  */
 
 // Page Module
-require __DIR__ . '/../modules/page/bootstrap.php';
+require __DIR__ . "/../modules/page/bootstrap.php";
 
 // Post Module
-//require __DIR__ . '/../modules/post/bootstrap.php';
+//require __DIR__ . "/../modules/post/bootstrap.php";
 
 // Comment Module
-//require __DIR__ . '/../modules/comment/bootstrap.php';
+//require __DIR__ . "/../modules/comment/bootstrap.php";
 
 // User Module
-//require __DIR__ . '/../modules/user/bootstrap.php';
+//require __DIR__ . "/../modules/user/bootstrap.php";
 
 start();

@@ -7,8 +7,11 @@
  * @version 1.0
  */
 
-// Helper file
-require __DIR__ . '/helpers.php';
+// Helper functions
+require __DIR__ . "/helpers.php";
 
-// Routes file
-require __DIR__ . '/routes.php';
+// Main page functions
+require __DIR__ . "/page.php";
+
+// Routes function
+require __DIR__ . "/routes.php";

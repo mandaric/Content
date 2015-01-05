@@ -42,7 +42,7 @@ function start()
     else
     {
         // raise error
-        exit('no valid route found');
+        exit("no valid route found");
     }
 
 //    debug($_SERVER);
