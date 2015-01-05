@@ -5,7 +5,7 @@
  */
 route("GET", "/", function()
 {
-    page_view([
+    return page_view([
         "title" => "Index Page",
         "content" => "Welcome to my site"
     ]);
@@ -16,7 +16,7 @@ route("GET", "/", function()
  */
 route("GET", "/home", function()
 {
-    page_view([
+    return page_view([
         "title" => "Home Page",
         "content" => "Hello Homepage"
     ]);
@@ -24,15 +24,17 @@ route("GET", "/home", function()
 
 route("GET", "/cms/page/create", function()
 {
-    form_view("/cms/page");
+    return page_form_view("/cms/page");
 });
 
 route("POST", "/cms/page", function()
 {
-    $data = [
-        "title" => $_POST["title"],
-        "content" => $_POST["content"]
-    ];
-
-    db_create("pages", $data);
+    if (page_create($_POST))
+    {
+        return "page saved";
+    }
+    else
+    {
+        return "page not saved";
+    }
 });
