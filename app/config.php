@@ -1,6 +1,7 @@
 <?php
 
 $config = [
+    "view_dir" => __DIR__ . "/views/",
     "index_page" => "/",
     "author" => "Mladen Mandaric",
     "year" => 2015

@@ -7,6 +7,9 @@
 // Load Config
 require __DIR__ . "/config.php";
 
+// Load Template
+require __DIR__ . "/template.php";
+
 // Load generic helper functions
 require __DIR__ . "/helpers.php";
 
@@ -32,4 +35,7 @@ require __DIR__ . "/../modules/page/bootstrap.php";
 // User Module
 //require __DIR__ . "/../modules/user/bootstrap.php";
 
+/**
+ * Start the Application
+ */
 start();

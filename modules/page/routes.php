@@ -5,7 +5,7 @@
  */
 route("GET", "/", function()
 {
-    return page_view([
+    return render("page/page", [
         "title" => "Index Page",
         "content" => "Welcome to my site"
     ]);
@@ -16,7 +16,7 @@ route("GET", "/", function()
  */
 route("GET", "/home", function()
 {
-    return page_view([
+    return render("page/page", [
         "title" => "Home Page",
         "content" => "Hello Homepage"
     ]);
@@ -27,7 +27,10 @@ route("GET", "/home", function()
  */
 route("GET", "/cms/page/new", function()
 {
-    return page_form_view("/cms/page");
+    return render("page/form", [
+        "title" => "Create a new page",
+        "action" => "/cms/page"
+    ]);
 });
 
 /**

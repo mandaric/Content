@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    color: #212121;
+    background: whitesmoke;
+    margin: 15px 20px;
+}
+
+h1 {
+    color: darkred;
+}
+
+p {
+    font-size: 110%;
+}
