@@ -15,7 +15,7 @@ function render($file, $data = [], $layout = "layout")
 
     ob_start();
 
-    require config("view_dir") . "{$file}.phtml";
+    require config("template.view_dir") . "{$file}.phtml";
 
     $output = ob_get_clean();
 
